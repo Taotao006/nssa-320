@@ -1,0 +1,2 @@
+Standard_D2_v4              2 standardDv4Family
+Standard_D4_v4              4 standardDv4Family
