@@ -1,0 +1,5 @@
+[ubuntu_hosts]
+ubuntu
+[rocky_hosts]
+ansible1
+ansible2

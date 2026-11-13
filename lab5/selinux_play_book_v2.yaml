@@ -1,0 +1,10 @@
+---
+- name: Set SElinux to disabled
+  hosts: rocky_hosts
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Disable SElinux
+      ansible.posix.selinux:
+        policy: targeted
+        state: enforcing

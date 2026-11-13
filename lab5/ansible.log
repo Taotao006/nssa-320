@@ -1,0 +1,445 @@
+2026-10-25 17:25:42,086 p=14890 u=student n=ansible | win11 | FAILED! => {
+    "msg": "The module winping was not found in configured module paths"
+}
+2026-10-25 17:25:46,923 p=14906 u=student n=ansible | win11 | FAILED! => {
+    "msg": "winrm or requests is not installed: No module named 'winrm'"
+}
+2026-10-25 17:27:08,053 p=15042 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8fe9b3c3a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:27:21,089 p=15058 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9a40d713a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:27:49,305 p=15080 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f7cc410b3a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:29:14,767 p=15092 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f93611383a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:29:57,925 p=15103 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb2e9e6b3a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:30:28,026 p=15114 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f77644a03a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:32:05,791 p=15145 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9ceba793a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:36:40,989 p=15158 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2ba85d53a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:38:38,123 p=15922 u=student n=ansible | win11 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "ntlm: HTTPSConnectionPool(host='win11', port=5986): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f136e3363a0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+    "unreachable": true
+}
+2026-10-25 17:42:04,083 p=16081 u=student n=ansible | win11 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2026-10-25 17:46:14,824 p=16101 u=student n=ansible | win11 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2026-10-25 17:49:07,741 p=16120 u=student n=ansible | ansible2 | CHANGED | rc=0 >>
+uid=1000(student) gid=1000(student) groups=1000(student),10(wheel) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+
+2026-10-25 17:49:07,872 p=16120 u=student n=ansible | ansible1 | CHANGED | rc=0 >>
+uid=1000(student) gid=1000(student) groups=1000(student),10(wheel) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+
+2026-10-25 17:49:31,014 p=16161 u=student n=ansible | ansible2 | FAILED | rc=1 >>
+Call to Reboot failed: Interactive authentication required.non-zero return code
+
+2026-10-25 17:49:31,110 p=16161 u=student n=ansible | ansible1 | FAILED | rc=1 >>
+Call to Reboot failed: Interactive authentication required.non-zero return code
+
+2026-10-25 17:49:40,642 p=16192 u=student n=ansible | ansible2 | FAILED | rc=-1 >>
+Failed to connect to the host via ssh: ssh: connect to host ansible2 port 22: Connection refused
+
+2026-10-25 17:49:40,728 p=16192 u=student n=ansible | ansible1 | FAILED | rc=-1 >>
+Failed to connect to the host via ssh: ssh: connect to host ansible1 port 22: Connection refused
+
+2026-10-25 18:05:18,572 p=16315 u=student n=ansible | ansible1 | CHANGED | rc=0 >>
+ 18:05:18 up 15 min,  1 user,  load average: 0.00, 0.01, 0.04
+
+2026-10-25 18:05:18,950 p=16315 u=student n=ansible | ansible2 | CHANGED | rc=0 >>
+ 18:05:18 up 15 min,  1 user,  load average: 0.00, 0.00, 0.00
+
+2026-10-25 18:05:37,766 p=16354 u=student n=ansible | ubuntu | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2026-10-25 18:05:51,122 p=16378 u=student n=ansible | ubuntu | CHANGED | rc=0 >>
+student
+
+2026-10-25 18:06:26,754 p=16406 u=student n=ansible | @all:
+  |--@ungrouped:
+  |--@ubuntu_hosts:
+  |  |--ubuntu
+  |--@rocky_hosts:
+  |  |--ansible1
+  |  |--ansible2
+  |--@windows:
+  |  |--win11
+2026-10-25 18:07:12,748 p=16413 u=student n=ansible | ubuntu | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "comment": "",
+    "create_home": true,
+    "group": 1002,
+    "home": "/home/garret",
+    "name": "garret",
+    "shell": "/bin/sh",
+    "state": "present",
+    "system": false,
+    "uid": 1002
+}
+2026-10-25 18:07:15,986 p=16437 u=student n=ansible | ubuntu | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "append": false,
+    "changed": false,
+    "comment": "",
+    "group": 1002,
+    "home": "/home/garret",
+    "move_home": false,
+    "name": "garret",
+    "shell": "/bin/sh",
+    "state": "present",
+    "uid": 1002
+}
+2026-10-25 18:08:32,809 p=16465 u=student n=ansible | ERROR! Unexpected Exception, this is probably a bug: [Errno 32] Broken pipe
+2026-10-25 18:08:32,809 p=16465 u=student n=ansible | to see the full traceback, use -vvv
+2026-10-25 18:08:32,814 p=16465 u=student n=ansible | the full traceback was:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/site-packages/ansible/cli/__init__.py", line 647, in cli_executor
+    exit_code = cli.run()
+  File "/usr/lib/python3.9/site-packages/ansible/cli/doc.py", line 805, in run
+    self.display_plugin_list(docs)
+  File "/usr/lib/python3.9/site-packages/ansible/cli/doc.py", line 510, in display_plugin_list
+    DocCLI.pager("\n".join(text))
+  File "/usr/lib/python3.9/site-packages/ansible/cli/__init__.py", line 496, in pager
+    display.display(text, screen_only=True)
+  File "/usr/lib/python3.9/site-packages/ansible/utils/display.py", line 295, in display
+    fileobj.write(msg2)
+  File "/usr/lib/python3.9/site-packages/ansible/utils/display.py", line 175, in locking_wrapper
+    return f(*args, **kwargs)
+BrokenPipeError: [Errno 32] Broken pipe
+
+2026-10-25 18:09:18,762 p=16472 u=student n=ansible | ansible1 | FAILED | rc=2 >>
+/tmp:
+ansible_ansible.legacy.command_payload_9cgxk3oc
+dbus-A0t3naUP0N
+runtime-root
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-chronyd.service-5clgXr
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-colord.service-o18tXi
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-dbus-broker.service-qk8Uuk
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-irqbalance.service-J76048
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-kdump.service-LTexrx
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-ModemManager.service-MlUGOe
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-power-profiles-daemon.service-dN0ISx
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-rtkit-daemon.service-PBH9k4
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-switcheroo-control.service-ydsHJU
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-systemd-logind.service-2QrIjT
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-upower.service-yRnpUK
+vmware-root_923-3988752765
+vmware-root_924-2722763428ls: cannot access '&&': No such file or directory
+ls: cannot access 'echo': No such file or directory
+ls: cannot access 'This': No such file or directorynon-zero return code
+
+2026-10-25 18:09:33,716 p=16496 u=student n=ansible | ansible1 | CHANGED | rc=0 >>
+ansible_ansible.legacy.command_payload_ofn42cz7
+dbus-A0t3naUP0N
+runtime-root
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-chronyd.service-5clgXr
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-colord.service-o18tXi
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-dbus-broker.service-qk8Uuk
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-irqbalance.service-J76048
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-kdump.service-LTexrx
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-ModemManager.service-MlUGOe
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-power-profiles-daemon.service-dN0ISx
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-rtkit-daemon.service-PBH9k4
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-switcheroo-control.service-ydsHJU
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-systemd-logind.service-2QrIjT
+systemd-private-8b1b19f68e5e4a69a7f817fbdd205209-upower.service-yRnpUK
+vmware-root_923-3988752765
+vmware-root_924-2722763428
+This
+
+2026-10-25 18:17:15,012 p=16553 u=student n=ansible | Starting galaxy collection install process
+2026-10-25 18:17:15,012 p=16553 u=student n=ansible | Process install dependency map
+2026-10-25 18:17:15,012 p=16553 u=student n=ansible | |
+2026-10-25 18:17:15,123 p=16553 u=student n=ansible | /
+2026-10-25 18:17:15,226 p=16553 u=student n=ansible | -
+2026-10-25 18:17:15,326 p=16553 u=student n=ansible | \
+2026-10-25 18:17:15,426 p=16553 u=student n=ansible | |
+2026-10-25 18:17:15,526 p=16553 u=student n=ansible | /
+2026-10-25 18:17:15,628 p=16553 u=student n=ansible | -
+2026-10-25 18:17:15,728 p=16553 u=student n=ansible | \
+2026-10-25 18:17:15,828 p=16553 u=student n=ansible | |
+2026-10-25 18:17:15,929 p=16553 u=student n=ansible | /
+2026-10-25 18:17:16,080 p=16553 u=student n=ansible | -
+2026-10-25 18:17:16,182 p=16553 u=student n=ansible | \
+2026-10-25 18:17:16,282 p=16553 u=student n=ansible | |
+2026-10-25 18:17:16,382 p=16553 u=student n=ansible | /
+2026-10-25 18:17:16,483 p=16553 u=student n=ansible | -
+2026-10-25 18:17:16,583 p=16553 u=student n=ansible | Starting collection install process
+2026-10-25 18:17:16,584 p=16553 u=student n=ansible | |
+2026-10-25 18:17:16,587 p=16553 u=student n=ansible | Downloading https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/ansible-posix-2.2.2.tar.gz to /home/student/.ansible/tmp/ansible-local-16553al3aizxp/tmpetc3vwnd/ansible-posix-2.2.2-9_b_emlr
+2026-10-25 18:17:16,684 p=16553 u=student n=ansible | /
+2026-10-25 18:17:16,784 p=16553 u=student n=ansible | -
+2026-10-25 18:17:16,885 p=16553 u=student n=ansible | \
+2026-10-25 18:17:16,985 p=16553 u=student n=ansible | |
+2026-10-25 18:17:17,086 p=16553 u=student n=ansible | Installing 'ansible.posix:2.2.2' to '/home/student/.ansible/collections/ansible_collections/ansible/posix'
+2026-10-25 18:17:17,086 p=16553 u=student n=ansible | /
+2026-10-25 18:17:17,186 p=16553 u=student n=ansible | -
+2026-10-25 18:17:17,287 p=16553 u=student n=ansible | ansible.posix:2.2.2 was installed successfully
+2026-10-25 18:18:39,895 p=16573 u=student n=ansible | [WARNING]: Collection ansible.posix does not support Ansible version 2.14.18
+
+2026-10-25 18:18:39,897 p=16573 u=student n=ansible | playbook: selinux_play_book_v1.yaml
+2026-10-25 18:18:54,712 p=16582 u=student n=ansible | ansible-playbook [core 2.14.18]
+  config file = /home/student/lab5/ansible.cfg
+  configured module search path = ['/home/student/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/student/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.9.25 (main, Aug  6 2026, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-14)] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+2026-10-25 18:18:54,712 p=16582 u=student n=ansible | Using /home/student/lab5/ansible.cfg as config file
+2026-10-25 18:18:54,719 p=16582 u=student n=ansible | host_list declined parsing /home/student/lab5/inventory.inv as it did not pass its verify_file() method
+2026-10-25 18:18:54,719 p=16582 u=student n=ansible | script declined parsing /home/student/lab5/inventory.inv as it did not pass its verify_file() method
+2026-10-25 18:18:54,719 p=16582 u=student n=ansible | auto declined parsing /home/student/lab5/inventory.inv as it did not pass its verify_file() method
+2026-10-25 18:18:54,720 p=16582 u=student n=ansible | yaml declined parsing /home/student/lab5/inventory.inv as it did not pass its verify_file() method
+2026-10-25 18:18:54,721 p=16582 u=student n=ansible | Parsed /home/student/lab5/inventory.inv inventory source with ini plugin
+2026-10-25 18:18:54,895 p=16582 u=student n=ansible | [WARNING]: Collection ansible.posix does not support Ansible version 2.14.18
+
+2026-10-25 18:18:54,913 p=16582 u=student n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2026-10-25 18:18:54,913 p=16582 u=student n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2026-10-25 18:18:54,913 p=16582 u=student n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2026-10-25 18:18:54,913 p=16582 u=student n=ansible | PLAYBOOK: selinux_play_book_v1.yaml **********************************************************************************************************************************************************
+2026-10-25 18:18:54,913 p=16582 u=student n=ansible | 1 plays in selinux_play_book_v1.yaml
+2026-10-25 18:18:54,915 p=16582 u=student n=ansible | PLAY [Set SElinux to disabled] ***************************************************************************************************************************************************************
+2026-10-25 18:18:54,963 p=16582 u=student n=ansible | TASK [Disable SElinux] ***********************************************************************************************************************************************************************
+2026-10-25 18:18:54,980 p=16582 u=student n=ansible | <ansible1> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:54,980 p=16582 u=student n=ansible | <ansible1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/59692cd6cf"' ansible1 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+2026-10-25 18:18:54,999 p=16582 u=student n=ansible | <ansible2> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:55,002 p=16582 u=student n=ansible | <ansible2> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/93e3993381"' ansible2 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+2026-10-25 18:18:55,409 p=16582 u=student n=ansible | <ansible2> (0, b'/home/student\n', b'')
+2026-10-25 18:18:55,409 p=16582 u=student n=ansible | <ansible2> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:55,409 p=16582 u=student n=ansible | <ansible2> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/93e3993381"' ansible2 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/student/.ansible/tmp `"&& mkdir "` echo /home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664 `" && echo ansible-tmp-1792966735.4082766-16587-229818408405664="` echo /home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664 `" ) && sleep 0'"'"''
+2026-10-25 18:18:55,469 p=16582 u=student n=ansible | <ansible2> (0, b'ansible-tmp-1792966735.4082766-16587-229818408405664=/home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664\n', b'')
+2026-10-25 18:18:55,529 p=16582 u=student n=ansible | <ansible1> (0, b'/home/student\n', b'')
+2026-10-25 18:18:55,529 p=16582 u=student n=ansible | <ansible1> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:55,529 p=16582 u=student n=ansible | <ansible1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/59692cd6cf"' ansible1 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/student/.ansible/tmp `"&& mkdir "` echo /home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241 `" && echo ansible-tmp-1792966735.5280192-16586-59316984609241="` echo /home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241 `" ) && sleep 0'"'"''
+2026-10-25 18:18:55,606 p=16582 u=student n=ansible | <ansible1> (0, b'ansible-tmp-1792966735.5280192-16586-59316984609241=/home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241\n', b'')
+2026-10-25 18:18:55,834 p=16582 u=student n=ansible | <ansible2> Attempting python interpreter discovery
+2026-10-25 18:18:55,834 p=16582 u=student n=ansible | <ansible2> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:55,834 p=16582 u=student n=ansible | <ansible1> Attempting python interpreter discovery
+2026-10-25 18:18:55,834 p=16582 u=student n=ansible | <ansible1> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:55,835 p=16582 u=student n=ansible | <ansible1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/59692cd6cf"' ansible1 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'python3.11'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.10'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.9'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.8'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+2026-10-25 18:18:55,835 p=16582 u=student n=ansible | <ansible2> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/93e3993381"' ansible2 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'python3.11'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.10'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.9'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.8'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+2026-10-25 18:18:55,898 p=16582 u=student n=ansible | <ansible2> (0, b'PLATFORM\nLinux\nFOUND\n/usr/bin/python3.9\n/usr/bin/python3\n/usr/libexec/platform-python\n/usr/bin/python\n/usr/bin/python\nENDFOUND\n', b'')
+2026-10-25 18:18:55,899 p=16582 u=student n=ansible | <ansible2> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:55,899 p=16582 u=student n=ansible | <ansible2> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/93e3993381"' ansible2 '/bin/sh -c '"'"'/usr/bin/python3.9 && sleep 0'"'"''
+2026-10-25 18:18:55,907 p=16582 u=student n=ansible | <ansible1> (0, b'PLATFORM\nLinux\nFOUND\n/usr/bin/python3.9\n/usr/bin/python3\n/usr/libexec/platform-python\n/usr/bin/python\n/usr/bin/python\nENDFOUND\n', b'')
+2026-10-25 18:18:55,907 p=16582 u=student n=ansible | <ansible1> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:55,908 p=16582 u=student n=ansible | <ansible1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/59692cd6cf"' ansible1 '/bin/sh -c '"'"'/usr/bin/python3.9 && sleep 0'"'"''
+2026-10-25 18:18:55,994 p=16582 u=student n=ansible | <ansible2> (0, b'{"platform_dist_result": [], "osrelease_content": "NAME=\\"Rocky Linux\\"\\nVERSION=\\"9.8 (Blue Onyx)\\"\\nRELEASE_TYPE=\\"stable\\"\\nID=\\"rocky\\"\\nID_LIKE=\\"rhel centos fedora\\"\\nVERSION_ID=\\"9.8\\"\\nPLATFORM_ID=\\"platform:el9\\"\\nPRETTY_NAME=\\"Rocky Linux 9.8 (Blue Onyx)\\"\\nANSI_COLOR=\\"0;32\\"\\nLOGO=\\"fedora-logo-icon\\"\\nCPE_NAME=\\"cpe:/o:rocky:rocky:9::baseos\\"\\nHOME_URL=\\"https://rockylinux.org/\\"\\nVENDOR_NAME=\\"RESF\\"\\nVENDOR_URL=\\"https://resf.org/\\"\\nBUG_REPORT_URL=\\"https://bugs.rockylinux.org/\\"\\nSUPPORT_END=\\"2032-05-31\\"\\nROCKY_SUPPORT_PRODUCT=\\"Rocky-Linux-9\\"\\nROCKY_SUPPORT_PRODUCT_VERSION=\\"9.8\\"\\nREDHAT_SUPPORT_PRODUCT=\\"Rocky Linux\\"\\nREDHAT_SUPPORT_PRODUCT_VERSION=\\"9.8\\"\\n"}\n', b'')
+2026-10-25 18:18:55,997 p=16582 u=student n=ansible | Using module file /home/student/.ansible/collections/ansible_collections/ansible/posix/plugins/modules/selinux.py
+2026-10-25 18:18:55,998 p=16582 u=student n=ansible | <ansible2> PUT /home/student/.ansible/tmp/ansible-local-16582cqlq5knp/tmprp5xml41 TO /home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664/AnsiballZ_selinux.py
+2026-10-25 18:18:55,999 p=16582 u=student n=ansible | <ansible2> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/93e3993381"' '[ansible2]'
+2026-10-25 18:18:56,027 p=16582 u=student n=ansible | <ansible1> (0, b'{"platform_dist_result": [], "osrelease_content": "NAME=\\"Rocky Linux\\"\\nVERSION=\\"9.8 (Blue Onyx)\\"\\nRELEASE_TYPE=\\"stable\\"\\nID=\\"rocky\\"\\nID_LIKE=\\"rhel centos fedora\\"\\nVERSION_ID=\\"9.8\\"\\nPLATFORM_ID=\\"platform:el9\\"\\nPRETTY_NAME=\\"Rocky Linux 9.8 (Blue Onyx)\\"\\nANSI_COLOR=\\"0;32\\"\\nLOGO=\\"fedora-logo-icon\\"\\nCPE_NAME=\\"cpe:/o:rocky:rocky:9::baseos\\"\\nHOME_URL=\\"https://rockylinux.org/\\"\\nVENDOR_NAME=\\"RESF\\"\\nVENDOR_URL=\\"https://resf.org/\\"\\nBUG_REPORT_URL=\\"https://bugs.rockylinux.org/\\"\\nSUPPORT_END=\\"2032-05-31\\"\\nROCKY_SUPPORT_PRODUCT=\\"Rocky-Linux-9\\"\\nROCKY_SUPPORT_PRODUCT_VERSION=\\"9.8\\"\\nREDHAT_SUPPORT_PRODUCT=\\"Rocky Linux\\"\\nREDHAT_SUPPORT_PRODUCT_VERSION=\\"9.8\\"\\n"}\n', b'')
+2026-10-25 18:18:56,028 p=16582 u=student n=ansible | Using module file /home/student/.ansible/collections/ansible_collections/ansible/posix/plugins/modules/selinux.py
+2026-10-25 18:18:56,028 p=16582 u=student n=ansible | <ansible1> PUT /home/student/.ansible/tmp/ansible-local-16582cqlq5knp/tmpc1ihniu8 TO /home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241/AnsiballZ_selinux.py
+2026-10-25 18:18:56,032 p=16582 u=student n=ansible | <ansible1> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/59692cd6cf"' '[ansible1]'
+2026-10-25 18:18:56,082 p=16582 u=student n=ansible | <ansible2> (0, b'sftp> put /home/student/.ansible/tmp/ansible-local-16582cqlq5knp/tmprp5xml41 /home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664/AnsiballZ_selinux.py\n', b'')
+2026-10-25 18:18:56,083 p=16582 u=student n=ansible | <ansible2> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:56,083 p=16582 u=student n=ansible | <ansible2> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/93e3993381"' ansible2 '/bin/sh -c '"'"'chmod u+x /home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664/ /home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664/AnsiballZ_selinux.py && sleep 0'"'"''
+2026-10-25 18:18:56,133 p=16582 u=student n=ansible | <ansible1> (0, b'sftp> put /home/student/.ansible/tmp/ansible-local-16582cqlq5knp/tmpc1ihniu8 /home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241/AnsiballZ_selinux.py\n', b'')
+2026-10-25 18:18:56,134 p=16582 u=student n=ansible | <ansible1> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:56,135 p=16582 u=student n=ansible | <ansible1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/59692cd6cf"' ansible1 '/bin/sh -c '"'"'chmod u+x /home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241/ /home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241/AnsiballZ_selinux.py && sleep 0'"'"''
+2026-10-25 18:18:56,148 p=16582 u=student n=ansible | <ansible2> (0, b'', b'')
+2026-10-25 18:18:56,148 p=16582 u=student n=ansible | <ansible2> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:56,148 p=16582 u=student n=ansible | <ansible2> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/93e3993381"' -tt ansible2 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-akvyicagimpbqjhhzhwbzkslogdgxdxd ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664/AnsiballZ_selinux.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2026-10-25 18:18:56,206 p=16582 u=student n=ansible | <ansible1> (0, b'', b'')
+2026-10-25 18:18:56,207 p=16582 u=student n=ansible | <ansible1> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:56,210 p=16582 u=student n=ansible | <ansible1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/59692cd6cf"' -tt ansible1 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-xyscepdcnxaqvqmpewmznyrkfvzwdoag ; /usr/bin/python3 /home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241/AnsiballZ_selinux.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2026-10-25 18:18:56,321 p=16582 u=student n=ansible | Escalation succeeded
+2026-10-25 18:18:56,371 p=16582 u=student n=ansible | Escalation succeeded
+2026-10-25 18:18:56,802 p=16582 u=student n=ansible | <ansible2> (0, b'\r\n{"changed": true, "msg": "Config SELinux state changed from \'enforcing\' to \'disabled\'", "configfile": "/etc/selinux/config", "policy": "targeted", "state": "disabled", "reboot_required": true, "invocation": {"module_args": {"policy": "targeted", "state": "disabled", "configfile": "/etc/selinux/config", "update_kernel_param": false}}, "warnings": ["SELinux state temporarily changed from \'enforcing\' to \'permissive\'. State change will take effect next reboot."]}\r\n', b'Shared connection to ansible2 closed.\r\n')
+2026-10-25 18:18:56,802 p=16582 u=student n=ansible | <ansible2> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:56,802 p=16582 u=student n=ansible | <ansible2> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/93e3993381"' ansible2 '/bin/sh -c '"'"'rm -f -r /home/student/.ansible/tmp/ansible-tmp-1792966735.4082766-16587-229818408405664/ > /dev/null 2>&1 && sleep 0'"'"''
+2026-10-25 18:18:56,849 p=16582 u=student n=ansible | <ansible1> (0, b'\r\n{"changed": true, "msg": "Config SELinux state changed from \'enforcing\' to \'disabled\'", "configfile": "/etc/selinux/config", "policy": "targeted", "state": "disabled", "reboot_required": true, "invocation": {"module_args": {"policy": "targeted", "state": "disabled", "configfile": "/etc/selinux/config", "update_kernel_param": false}}, "warnings": ["SELinux state temporarily changed from \'enforcing\' to \'permissive\'. State change will take effect next reboot."]}\r\n', b'Shared connection to ansible1 closed.\r\n')
+2026-10-25 18:18:56,849 p=16582 u=student n=ansible | <ansible1> ESTABLISH SSH CONNECTION FOR USER: None
+2026-10-25 18:18:56,849 p=16582 u=student n=ansible | <ansible1> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/student/.ansible/cp/59692cd6cf"' ansible1 '/bin/sh -c '"'"'rm -f -r /home/student/.ansible/tmp/ansible-tmp-1792966735.5280192-16586-59316984609241/ > /dev/null 2>&1 && sleep 0'"'"''
+2026-10-25 18:18:56,865 p=16582 u=student n=ansible | <ansible2> (0, b'', b'')
+2026-10-25 18:18:56,869 p=16582 u=student n=ansible | [WARNING]: SELinux state temporarily changed from 'enforcing' to 'permissive'. State change will take effect next reboot.
+
+2026-10-25 18:18:56,869 p=16582 u=student n=ansible | changed: [ansible2] => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "configfile": "/etc/selinux/config",
+    "invocation": {
+        "module_args": {
+            "configfile": "/etc/selinux/config",
+            "policy": "targeted",
+            "state": "disabled",
+            "update_kernel_param": false
+        }
+    },
+    "msg": "Config SELinux state changed from 'enforcing' to 'disabled'",
+    "policy": "targeted",
+    "reboot_required": true,
+    "state": "disabled"
+}
+2026-10-25 18:18:56,928 p=16582 u=student n=ansible | <ansible1> (0, b'', b'')
+2026-10-25 18:18:56,932 p=16582 u=student n=ansible | changed: [ansible1] => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "configfile": "/etc/selinux/config",
+    "invocation": {
+        "module_args": {
+            "configfile": "/etc/selinux/config",
+            "policy": "targeted",
+            "state": "disabled",
+            "update_kernel_param": false
+        }
+    },
+    "msg": "Config SELinux state changed from 'enforcing' to 'disabled'",
+    "policy": "targeted",
+    "reboot_required": true,
+    "state": "disabled"
+}
+2026-10-25 18:18:56,958 p=16582 u=student n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2026-10-25 18:18:56,958 p=16582 u=student n=ansible | ansible1                   : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:18:56,958 p=16582 u=student n=ansible | ansible2                   : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:20:43,456 p=16669 u=student n=ansible | [WARNING]: Collection ansible.posix does not support Ansible version 2.14.18
+
+2026-10-25 18:20:43,459 p=16669 u=student n=ansible | playbook: selinux_play_book_v2.yaml
+2026-10-25 18:22:39,983 p=16718 u=student n=ansible | [WARNING]: Collection ansible.posix does not support Ansible version 2.14.18
+
+2026-10-25 18:22:40,003 p=16718 u=student n=ansible | PLAY [Set SElinux to disabled] ***************************************************************************************************************************************************************
+2026-10-25 18:22:40,050 p=16718 u=student n=ansible | TASK [Disable SElinux] ***********************************************************************************************************************************************************************
+2026-10-25 18:22:41,626 p=16718 u=student n=ansible | [WARNING]: SELinux state change will take effect next reboot
+
+2026-10-25 18:22:41,627 p=16718 u=student n=ansible | ok: [ansible2]
+2026-10-25 18:22:41,805 p=16718 u=student n=ansible | ok: [ansible1]
+2026-10-25 18:22:41,832 p=16718 u=student n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2026-10-25 18:22:41,832 p=16718 u=student n=ansible | ansible1                   : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:22:41,832 p=16718 u=student n=ansible | ansible2                   : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:22:45,328 p=16758 u=student n=ansible | [WARNING]: Collection ansible.posix does not support Ansible version 2.14.18
+
+2026-10-25 18:22:45,348 p=16758 u=student n=ansible | PLAY [Set SElinux to disabled] ***************************************************************************************************************************************************************
+2026-10-25 18:22:45,400 p=16758 u=student n=ansible | TASK [Disable SElinux] ***********************************************************************************************************************************************************************
+2026-10-25 18:22:46,595 p=16758 u=student n=ansible | changed: [ansible2]
+2026-10-25 18:22:46,756 p=16758 u=student n=ansible | changed: [ansible1]
+2026-10-25 18:22:46,784 p=16758 u=student n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2026-10-25 18:22:46,784 p=16758 u=student n=ansible | ansible1                   : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:22:46,784 p=16758 u=student n=ansible | ansible2                   : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:22:52,386 p=16789 u=student n=ansible | [WARNING]: Collection ansible.posix does not support Ansible version 2.14.18
+
+2026-10-25 18:22:52,406 p=16789 u=student n=ansible | PLAY [Set SElinux to disabled] ***************************************************************************************************************************************************************
+2026-10-25 18:22:52,457 p=16789 u=student n=ansible | TASK [Disable SElinux] ***********************************************************************************************************************************************************************
+2026-10-25 18:22:53,708 p=16789 u=student n=ansible | ok: [ansible2]
+2026-10-25 18:22:53,831 p=16789 u=student n=ansible | ok: [ansible1]
+2026-10-25 18:22:53,855 p=16789 u=student n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2026-10-25 18:22:53,855 p=16789 u=student n=ansible | ansible1                   : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:22:53,855 p=16789 u=student n=ansible | ansible2                   : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:22:57,171 p=16820 u=student n=ansible | [WARNING]: Collection ansible.posix does not support Ansible version 2.14.18
+
+2026-10-25 18:22:57,192 p=16820 u=student n=ansible | PLAY [Set SElinux to disabled] ***************************************************************************************************************************************************************
+2026-10-25 18:22:57,240 p=16820 u=student n=ansible | TASK [Disable SElinux] ***********************************************************************************************************************************************************************
+2026-10-25 18:22:58,451 p=16820 u=student n=ansible | [WARNING]: SELinux state temporarily changed from 'enforcing' to 'permissive'. State change will take effect next reboot.
+
+2026-10-25 18:22:58,452 p=16820 u=student n=ansible | changed: [ansible2]
+2026-10-25 18:22:58,612 p=16820 u=student n=ansible | changed: [ansible1]
+2026-10-25 18:22:58,639 p=16820 u=student n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2026-10-25 18:22:58,639 p=16820 u=student n=ansible | ansible1                   : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 18:22:58,639 p=16820 u=student n=ansible | ansible2                   : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 19:21:34,898 p=16945 u=student n=ansible | [WARNING]: Collection ansible.posix does not support Ansible version 2.14.18
+
+2026-10-25 19:21:34,946 p=16945 u=student n=ansible | PLAY [Set SElinux to disabled] ***************************************************************************************************************************************************************
+2026-10-25 19:21:34,976 p=16945 u=student n=ansible | TASK [Disable SElinux] ***********************************************************************************************************************************************************************
+2026-10-25 19:21:36,633 p=16945 u=student n=ansible | [WARNING]: SELinux state change will take effect next reboot
+
+2026-10-25 19:21:36,634 p=16945 u=student n=ansible | ok: [ansible2]
+2026-10-25 19:21:36,673 p=16945 u=student n=ansible | ok: [ansible1]
+2026-10-25 19:21:36,700 p=16945 u=student n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************
+2026-10-25 19:21:36,700 p=16945 u=student n=ansible | ansible1                   : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 19:21:36,700 p=16945 u=student n=ansible | ansible2                   : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-10-25 19:35:29,229 p=17031 u=student n=ansible | Starting galaxy role install process
+2026-10-25 19:35:29,418 p=17031 u=student n=ansible | - downloading role 'nginx', owned by geerlingguy
+2026-10-25 19:35:29,895 p=17031 u=student n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-nginx/archive/3.3.1.tar.gz
+2026-10-25 19:35:30,196 p=17031 u=student n=ansible | - extracting geerlingguy.nginx to /home/student/.ansible/roles/geerlingguy.nginx
+2026-10-25 19:35:30,213 p=17031 u=student n=ansible | - geerlingguy.nginx (3.3.1) was installed successfully
+2026-10-25 19:43:04,914 p=17113 u=student n=ansible | PLAY [APply the NGINX role to ansible2] ****************************************
+2026-10-25 19:43:04,928 p=17113 u=student n=ansible | TASK [Gathering Facts] *********************************************************
+2026-10-25 19:43:07,099 p=17113 u=student n=ansible | ok: [ansible2]
+2026-10-25 19:43:07,120 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Include OS-specific variables.] **********************
+2026-10-25 19:43:07,163 p=17113 u=student n=ansible | ok: [ansible2]
+2026-10-25 19:43:07,172 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Define nginx_user.] **********************************
+2026-10-25 19:43:07,204 p=17113 u=student n=ansible | ok: [ansible2]
+2026-10-25 19:43:07,214 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : include_tasks] ***************************************
+2026-10-25 19:43:07,258 p=17113 u=student n=ansible | included: /home/student/.ansible/roles/geerlingguy.nginx/tasks/setup-RedHat.yml for ansible2
+2026-10-25 19:43:07,271 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Enable nginx repo.] **********************************
+2026-10-25 19:43:08,716 p=17113 u=student n=ansible | changed: [ansible2]
+2026-10-25 19:43:08,725 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Ensure nginx is installed.] **************************
+2026-10-25 19:43:14,501 p=17113 u=student n=ansible | changed: [ansible2]
+2026-10-25 19:43:14,512 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : include_tasks] ***************************************
+2026-10-25 19:43:14,572 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:14,580 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : include_tasks] ***************************************
+2026-10-25 19:43:14,604 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:14,612 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : include_tasks] ***************************************
+2026-10-25 19:43:14,631 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:14,640 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : include_tasks] ***************************************
+2026-10-25 19:43:14,660 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:14,668 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : include_tasks] ***************************************
+2026-10-25 19:43:14,688 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:14,698 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : include_tasks] ***************************************
+2026-10-25 19:43:14,728 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:14,736 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Remove default nginx vhost config file (if configured).] ***
+2026-10-25 19:43:14,769 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:14,777 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Ensure nginx_vhost_path exists.] *********************
+2026-10-25 19:43:15,583 p=17113 u=student n=ansible | ok: [ansible2]
+2026-10-25 19:43:15,592 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Add managed vhost config files.] *********************
+2026-10-25 19:43:15,608 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:15,616 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Remove managed vhost config files.] ******************
+2026-10-25 19:43:15,633 p=17113 u=student n=ansible | skipping: [ansible2]
+2026-10-25 19:43:15,645 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Remove legacy vhosts.conf file.] *********************
+2026-10-25 19:43:16,353 p=17113 u=student n=ansible | ok: [ansible2]
+2026-10-25 19:43:16,361 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Copy nginx configuration in place.] ******************
+2026-10-25 19:43:17,727 p=17113 u=student n=ansible | changed: [ansible2]
+2026-10-25 19:43:17,735 p=17113 u=student n=ansible | TASK [geerlingguy.nginx : Ensure nginx service is running as configured.] ******
+2026-10-25 19:43:19,302 p=17113 u=student n=ansible | changed: [ansible2]
+2026-10-25 19:43:19,330 p=17113 u=student n=ansible | RUNNING HANDLER [geerlingguy.nginx : reload nginx] *****************************
+2026-10-25 19:43:20,214 p=17113 u=student n=ansible | changed: [ansible2]
+2026-10-25 19:43:20,229 p=17113 u=student n=ansible | PLAY RECAP *********************************************************************
+2026-10-25 19:43:20,229 p=17113 u=student n=ansible | ansible2                   : ok=11   changed=5    unreachable=0    failed=0    skipped=9    rescued=0    ignored=0   

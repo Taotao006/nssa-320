@@ -1,0 +1,14 @@
+---
+- name: Apply custom MOTD role
+  hosts: ansible2
+  become: yes
+
+  pre_tasks:
+    - name: Update Package cache
+      ansible.builtin.package:
+        update_cache: yes
+
+  roles:
+    - role: motd
+      vars: 
+        system_manager: "Alex Guan - NSSA 320"

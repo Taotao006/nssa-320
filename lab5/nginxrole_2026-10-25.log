@@ -1,0 +1,66 @@
+
+PLAY [APply the NGINX role to ansible2] ****************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [ansible2]
+
+TASK [geerlingguy.nginx : Include OS-specific variables.] **********************
+ok: [ansible2]
+
+TASK [geerlingguy.nginx : Define nginx_user.] **********************************
+ok: [ansible2]
+
+TASK [geerlingguy.nginx : include_tasks] ***************************************
+included: /home/student/.ansible/roles/geerlingguy.nginx/tasks/setup-RedHat.yml for ansible2
+
+TASK [geerlingguy.nginx : Enable nginx repo.] **********************************
+changed: [ansible2]
+
+TASK [geerlingguy.nginx : Ensure nginx is installed.] **************************
+changed: [ansible2]
+
+TASK [geerlingguy.nginx : include_tasks] ***************************************
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : include_tasks] ***************************************
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : include_tasks] ***************************************
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : include_tasks] ***************************************
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : include_tasks] ***************************************
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : include_tasks] ***************************************
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : Remove default nginx vhost config file (if configured).] ***
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : Ensure nginx_vhost_path exists.] *********************
+ok: [ansible2]
+
+TASK [geerlingguy.nginx : Add managed vhost config files.] *********************
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : Remove managed vhost config files.] ******************
+skipping: [ansible2]
+
+TASK [geerlingguy.nginx : Remove legacy vhosts.conf file.] *********************
+ok: [ansible2]
+
+TASK [geerlingguy.nginx : Copy nginx configuration in place.] ******************
+changed: [ansible2]
+
+TASK [geerlingguy.nginx : Ensure nginx service is running as configured.] ******
+changed: [ansible2]
+
+RUNNING HANDLER [geerlingguy.nginx : reload nginx] *****************************
+changed: [ansible2]
+
+PLAY RECAP *********************************************************************
+ansible2                   : ok=11   changed=5    unreachable=0    failed=0    skipped=9    rescued=0    ignored=0   
+

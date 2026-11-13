@@ -1,0 +1,7 @@
+---
+- name: Apply the NGINX role to ansible2
+  hosts: ansible2
+  become: yes
+
+  roles:
+    - geerlingguy.nginx

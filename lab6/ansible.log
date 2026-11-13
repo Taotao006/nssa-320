@@ -1,0 +1,52 @@
+2026-11-05 14:50:27,169 p=21748 u=student n=ansible | PLAY [Play 1 - Rocky Linux Hosts] **********************************************
+2026-11-05 14:50:27,179 p=21748 u=student n=ansible | TASK [Gathering Facts] *********************************************************
+2026-11-05 14:50:29,261 p=21748 u=student n=ansible | ok: [ansible2]
+2026-11-05 14:50:29,551 p=21748 u=student n=ansible | ok: [ansible1]
+2026-11-05 14:50:29,667 p=21748 u=student n=ansible | TASK [Greet Rocky Hosts] *******************************************************
+2026-11-05 14:50:29,694 p=21748 u=student n=ansible | ok: [ansible1] => {
+    "msg": "hello Rocky!"
+}
+2026-11-05 14:50:29,710 p=21748 u=student n=ansible | ok: [ansible2] => {
+    "msg": "hello Rocky!"
+}
+2026-11-05 14:50:29,717 p=21748 u=student n=ansible | TASK [Greet Linux Hosts] *******************************************************
+2026-11-05 14:50:29,740 p=21748 u=student n=ansible | ok: [ansible1] => {
+    "msg": "Hello Linux!"
+}
+2026-11-05 14:50:29,752 p=21748 u=student n=ansible | ok: [ansible2] => {
+    "msg": "Hello Linux!"
+}
+2026-11-05 14:50:29,804 p=21748 u=student n=ansible | PLAY [Play 2 - Ubuntu Hosts] ***************************************************
+2026-11-05 14:50:29,809 p=21748 u=student n=ansible | TASK [Gathering Facts] *********************************************************
+2026-11-05 14:50:32,776 p=21748 u=student n=ansible | ok: [ubuntu]
+2026-11-05 14:50:32,805 p=21748 u=student n=ansible | TASK [Greet Ubuntu Hosts] ******************************************************
+2026-11-05 14:50:32,829 p=21748 u=student n=ansible | ok: [ubuntu] => {
+    "msg": "Hello Ubuntu!"
+}
+2026-11-05 14:50:32,868 p=21748 u=student n=ansible | PLAY RECAP *********************************************************************
+2026-11-05 14:50:32,868 p=21748 u=student n=ansible | ansible1                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-05 14:50:32,868 p=21748 u=student n=ansible | ansible2                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-05 14:50:32,868 p=21748 u=student n=ansible | ubuntu                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-13 12:33:36,432 p=28243 u=student n=ansible | PLAY [Play 1 - Rocky Linux Hosts] ****************************************************************************************************************************
+2026-11-13 12:33:36,440 p=28243 u=student n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2026-11-13 12:33:38,463 p=28243 u=student n=ansible | ok: [ansible1]
+2026-11-13 12:33:46,499 p=28243 u=student n=ansible | fatal: [ansible2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host ansible2 port 22: Connection timed out", "unreachable": true}
+2026-11-13 12:33:46,523 p=28243 u=student n=ansible | TASK [Greet Rocky Hosts] *************************************************************************************************************************************
+2026-11-13 12:33:46,541 p=28243 u=student n=ansible | ok: [ansible1] => {
+    "msg": "hello Rocky!"
+}
+2026-11-13 12:33:46,548 p=28243 u=student n=ansible | TASK [Greet Linux Hosts] *************************************************************************************************************************************
+2026-11-13 12:33:46,565 p=28243 u=student n=ansible | ok: [ansible1] => {
+    "msg": "Hello Linux!"
+}
+2026-11-13 12:33:46,590 p=28243 u=student n=ansible | PLAY [Play 2 - Ubuntu Hosts] *********************************************************************************************************************************
+2026-11-13 12:33:46,594 p=28243 u=student n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2026-11-13 12:33:48,285 p=28243 u=student n=ansible | ok: [ubuntu]
+2026-11-13 12:33:48,313 p=28243 u=student n=ansible | TASK [Greet Ubuntu Hosts] ************************************************************************************************************************************
+2026-11-13 12:33:48,338 p=28243 u=student n=ansible | ok: [ubuntu] => {
+    "msg": "Hello Ubuntu!"
+}
+2026-11-13 12:33:48,405 p=28243 u=student n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2026-11-13 12:33:48,405 p=28243 u=student n=ansible | ansible1                   : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-13 12:33:48,405 p=28243 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-13 12:33:48,405 p=28243 u=student n=ansible | ubuntu                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
