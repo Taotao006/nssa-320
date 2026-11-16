@@ -1,0 +1,7 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.1.11 control control.ag8485.com
+192.168.1.12 ansible1 ansible1.ag8485.com
+192.168.1.13 ansible2 ansible2.ag8485.com
+192.168.1.14 ubuntu ubuntu.ag8485.com
+192.168.1.15 win11 win11.ag8485.com

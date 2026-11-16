@@ -2,17 +2,21 @@
 
 - name: Play 1 - Rocky Linux Hosts
   hosts: rocky_hosts
-  tasks: 
+  tasks:
     - name: Greet Rocky Hosts
-      debug:
+      ansible.builtin.debug:
         msg: "hello Rocky!"
     - name: Greet Linux Hosts
-      debug:
+      ansible.builtin.debug:
         msg: "Hello Linux!"
 - name: Play 2 - Ubuntu Hosts
   hosts: ubuntu_hosts
   tasks:
     - name: Greet Ubuntu Hosts
-      debug:
+      ansible.builtin.debug:
         msg: "Hello Ubuntu!"
-
+    - name: Create a temporary test file on ubuntu hosts
+      ansible.builtin.file:
+        path: /tmp/ansible_test_file
+        state: touch
+        mode: '0644'

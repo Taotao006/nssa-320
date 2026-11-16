@@ -1,0 +1,25 @@
+---
+- name: Install, start, and enable httpd
+  hosts: rocky_hosts
+  become: true
+  tasks:
+    - name: Install httpd
+      ansible.builtin.apt:
+        name: httpd
+        state: present
+
+    - name: Start httpd
+      ansible.builtin.service:
+        name: httpd
+        state: started
+
+    - name: Enable httpd
+      ansible.builtin.service:
+        name: httpd
+        enabled: true
+
+    - name: Ensure /var/www/html/index.html exists
+      ansible.builtin.file:
+        path: /var/www/html/index.html
+        state: touch
+        mode: "0644"
