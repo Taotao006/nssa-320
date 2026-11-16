@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebServer Index Page</title>
+</head>
+<body>
+  <header>
+    <h1>Server: {{ ansible_fqdn }}</h1>
+  </header>
+  <main>
+    <h2>Current Date: {{ ansible_date_time.date }}</h2>
+    <p>This webpage was deployed using Ansible!</p>
+  </main>
+</body>
+</html>
