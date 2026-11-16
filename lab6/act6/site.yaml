@@ -1,0 +1,14 @@
+---
+- name: Play 1 - Rocky Hosts
+  hosts: rocky_hosts
+  tasks:
+    - name: Install Web Server
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+    - name: Start and Enable Web Server
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
+
