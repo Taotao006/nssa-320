@@ -431,3 +431,14 @@ Should be written as:
     "ansible.builtin.su": "Substitute User",
     "ansible.builtin.sudo": "Substitute User DO"
 }
+2026-11-16 04:00:47,802 p=174447 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 04:00:49,540 p=174460 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 04:00:49,541 p=174460 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 04:00:49,541 p=174460 u=student n=ansible | playbook: site.yaml
+2026-11-16 04:00:50,113 p=174463 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
