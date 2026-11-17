@@ -1,0 +1,433 @@
+2026-11-16 03:03:35,480 p=171292 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:03:36,592 p=171286 u=student n=ansiblelint | Listing 1 violation(s) that are fatal
+2026-11-16 03:04:39,936 p=171359 u=student n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  found unacceptable key (unhashable type: 'AnsibleMapping')
+
+The error appears to be in '/home/student/nssa-320/lab6/act6/site.yaml': line 7, column 16, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      ansible.builtin.dnf:
+        name: {{ service_name }}
+               ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2026-11-16 03:05:21,212 p=171392 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:05:22,894 p=171406 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:05:22,895 p=171406 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:05:22,895 p=171406 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:05:23,459 p=171409 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
+2026-11-16 03:05:23,503 p=171385 u=student n=ansiblelint | Listing 1 violation(s) that are fatal
+2026-11-16 03:05:40,576 p=171443 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:05:42,289 p=171456 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:05:42,290 p=171456 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:05:42,291 p=171456 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:05:42,819 p=171459 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
+2026-11-16 03:05:50,146 p=171469 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:05:50,157 p=171469 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:05:53,189 p=171469 u=student n=ansible | fatal: [ansible2]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:05:53,218 p=171469 u=student n=ansible | fatal: [ansible1]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:05:53,219 p=171469 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:05:53,224 p=171469 u=student n=ansible | ansible1                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:05:53,224 p=171469 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:05:57,918 p=171508 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:05:57,929 p=171508 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:05:59,609 p=171508 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:05:59,680 p=171508 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:05:59,710 p=171508 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:06:01,421 p=171508 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:06:01,632 p=171508 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:06:01,643 p=171508 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:06:02,745 p=171508 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:06:02,794 p=171508 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:06:02,804 p=171508 u=student n=ansible | TASK [Move index.js to Remote Server] *********************************************************************************************
+2026-11-16 03:06:03,053 p=171508 u=student n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2026-11-16 03:06:03,053 p=171508 u=student n=ansible | fatal: [ansible2]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/index.js'\nSearched in:\n\t/home/student/nssa-320/lab6/act6/templates/templates/index.js\n\t/home/student/nssa-320/lab6/act6/templates/index.js\n\t/home/student/nssa-320/lab6/act6/templates/templates/index.js\n\t/home/student/nssa-320/lab6/act6/templates/index.js on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2026-11-16 03:06:03,066 p=171508 u=student n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2026-11-16 03:06:03,067 p=171508 u=student n=ansible | fatal: [ansible1]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/index.js'\nSearched in:\n\t/home/student/nssa-320/lab6/act6/templates/templates/index.js\n\t/home/student/nssa-320/lab6/act6/templates/index.js\n\t/home/student/nssa-320/lab6/act6/templates/templates/index.js\n\t/home/student/nssa-320/lab6/act6/templates/index.js on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2026-11-16 03:06:03,068 p=171508 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:06:03,068 p=171508 u=student n=ansible | ansible1                   : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:06:03,068 p=171508 u=student n=ansible | ansible2                   : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:06:50,090 p=171639 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:06:50,101 p=171639 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:06:53,076 p=171639 u=student n=ansible | fatal: [ansible2]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:06:53,102 p=171639 u=student n=ansible | fatal: [ansible1]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:06:53,103 p=171639 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:06:53,103 p=171639 u=student n=ansible | ansible1                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:06:53,103 p=171639 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:06:57,497 p=171673 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:06:57,510 p=171673 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:06:59,224 p=171673 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:06:59,356 p=171673 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:06:59,392 p=171673 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:07:01,072 p=171673 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:07:01,154 p=171673 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:07:01,161 p=171673 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:07:02,288 p=171673 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:07:02,400 p=171673 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:07:02,409 p=171673 u=student n=ansible | TASK [Move index.js to Remote Server] *********************************************************************************************
+2026-11-16 03:07:03,936 p=171673 u=student n=ansible | fatal: [ansible2]: FAILED! => {"changed": false, "checksum": "390e39c96499d069cc8c9d92f88571b01c5780e7", "gid": 0, "group": "root", "mode": "0644", "msg": "chown failed: failed to look up user www-data", "owner": "root", "path": "/var/www/html/index.html", "secontext": "unconfined_u:object_r:httpd_sys_content_t:s0", "size": 308, "state": "file", "uid": 0}
+2026-11-16 03:07:03,946 p=171673 u=student n=ansible | fatal: [ansible1]: FAILED! => {"changed": false, "checksum": "a8f5bdf255257aa14a0c42af6ac33c35ca43b768", "gid": 0, "group": "root", "mode": "0644", "msg": "chown failed: failed to look up user www-data", "owner": "root", "path": "/var/www/html/index.html", "secontext": "unconfined_u:object_r:httpd_sys_content_t:s0", "size": 306, "state": "file", "uid": 0}
+2026-11-16 03:07:03,948 p=171673 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:07:03,948 p=171673 u=student n=ansible | ansible1                   : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:07:03,948 p=171673 u=student n=ansible | ansible2                   : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:10:40,011 p=171882 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:10:40,022 p=171882 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:10:41,839 p=171882 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:10:41,948 p=171882 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:10:41,991 p=171882 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:10:43,733 p=171882 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:10:43,831 p=171882 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:10:43,838 p=171882 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:10:44,954 p=171882 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:10:44,955 p=171882 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:10:44,962 p=171882 u=student n=ansible | TASK [Move index.js to Remote Server] *********************************************************************************************
+2026-11-16 03:10:46,416 p=171882 u=student n=ansible | changed: [ansible2]
+2026-11-16 03:10:46,418 p=171882 u=student n=ansible | changed: [ansible1]
+2026-11-16 03:10:46,474 p=171882 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:10:46,478 p=171882 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:10:48,017 p=171882 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:10:48,046 p=171882 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:10:49,671 p=171882 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:10:49,680 p=171882 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:10:50,312 p=171882 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:10:50,320 p=171882 u=student n=ansible | TASK [Move index.js to Remote Server] *********************************************************************************************
+2026-11-16 03:10:51,289 p=171882 u=student n=ansible | changed: [ubuntu]
+2026-11-16 03:10:51,331 p=171882 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:10:51,332 p=171882 u=student n=ansible | ansible1                   : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:10:51,332 p=171882 u=student n=ansible | ansible2                   : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:10:51,332 p=171882 u=student n=ansible | ubuntu                     : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:11:12,295 p=172059 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:11:12,306 p=172059 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:11:14,023 p=172059 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:11:14,210 p=172059 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:11:14,248 p=172059 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:11:15,992 p=172059 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:11:16,015 p=172059 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:11:16,022 p=172059 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:11:17,143 p=172059 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:11:17,160 p=172059 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:11:17,174 p=172059 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:11:18,548 p=172059 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:11:18,550 p=172059 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:11:18,610 p=172059 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:11:18,615 p=172059 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:11:19,906 p=172059 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:11:19,938 p=172059 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:11:21,551 p=172059 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:11:21,559 p=172059 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:11:22,171 p=172059 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:11:22,182 p=172059 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:11:23,067 p=172059 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:11:23,102 p=172059 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:11:23,103 p=172059 u=student n=ansible | ansible1                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:11:23,103 p=172059 u=student n=ansible | ansible2                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:11:23,103 p=172059 u=student n=ansible | ubuntu                     : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:16:28,559 p=172355 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:16:28,569 p=172355 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:16:30,451 p=172355 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:16:30,646 p=172355 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:16:30,682 p=172355 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:16:32,476 p=172355 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:16:32,549 p=172355 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:16:32,556 p=172355 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:16:33,731 p=172355 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:16:33,757 p=172355 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:16:33,765 p=172355 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:16:35,188 p=172355 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:16:35,195 p=172355 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:16:35,251 p=172355 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:16:35,255 p=172355 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:16:36,991 p=172355 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:16:37,025 p=172355 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:16:38,713 p=172355 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:16:38,725 p=172355 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:16:39,512 p=172355 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:16:39,520 p=172355 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:16:41,247 p=172355 u=student n=ansible | changed: [ubuntu]
+2026-11-16 03:16:41,292 p=172355 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:16:41,292 p=172355 u=student n=ansible | ansible1                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:16:41,292 p=172355 u=student n=ansible | ansible2                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:16:41,292 p=172355 u=student n=ansible | ubuntu                     : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:20:44,536 p=172595 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:20:46,180 p=172609 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:20:46,181 p=172609 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:20:46,181 p=172609 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:20:46,720 p=172612 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
+2026-11-16 03:20:46,762 p=172589 u=student n=ansiblelint | Listing 2 violation(s) that are fatal
+2026-11-16 03:21:27,022 p=172675 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:21:28,640 p=172690 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:21:28,641 p=172690 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:21:28,642 p=172690 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:21:29,192 p=172693 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
+2026-11-16 03:21:29,250 p=172669 u=student n=ansiblelint | Listing 1 violation(s) that are fatal
+2026-11-16 03:21:40,855 p=172711 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:21:42,489 p=172724 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:21:42,490 p=172724 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:21:42,491 p=172724 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:21:43,020 p=172727 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
+2026-11-16 03:21:55,242 p=172737 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:21:55,253 p=172737 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:21:58,406 p=172737 u=student n=ansible | fatal: [ansible1]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:21:58,412 p=172737 u=student n=ansible | fatal: [ansible2]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:21:58,413 p=172737 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:21:58,413 p=172737 u=student n=ansible | ansible1                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:21:58,413 p=172737 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:22:02,553 p=172777 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:22:02,564 p=172777 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:22:04,268 p=172777 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:22:04,414 p=172777 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:22:04,459 p=172777 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:22:06,235 p=172777 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:22:06,263 p=172777 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:22:06,276 p=172777 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:22:07,453 p=172777 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:22:07,456 p=172777 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:22:07,464 p=172777 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:22:08,983 p=172777 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:22:08,992 p=172777 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:22:09,052 p=172777 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:22:09,056 p=172777 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:22:10,734 p=172777 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:22:10,765 p=172777 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:22:12,390 p=172777 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:22:12,403 p=172777 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:22:13,094 p=172777 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:22:13,104 p=172777 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:22:14,166 p=172777 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:22:14,203 p=172777 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:22:14,203 p=172777 u=student n=ansible | ansible1                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:22:14,203 p=172777 u=student n=ansible | ansible2                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:22:14,203 p=172777 u=student n=ansible | ubuntu                     : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:22:34,075 p=172929 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:22:34,087 p=172929 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:22:37,603 p=172929 u=student n=ansible | fatal: [ansible1]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:22:37,609 p=172929 u=student n=ansible | fatal: [ansible2]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:22:37,610 p=172929 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:22:37,610 p=172929 u=student n=ansible | ansible1                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:22:37,610 p=172929 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:22:41,621 p=172961 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:22:41,632 p=172961 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:22:43,319 p=172961 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:22:43,479 p=172961 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:22:43,520 p=172961 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:22:45,273 p=172961 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:22:45,297 p=172961 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:22:45,304 p=172961 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:22:46,427 p=172961 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:22:46,452 p=172961 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:22:46,467 p=172961 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:22:47,862 p=172961 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:22:47,927 p=172961 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:22:47,984 p=172961 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:22:47,988 p=172961 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:22:49,409 p=172961 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:22:49,449 p=172961 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:22:50,640 p=172961 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:22:50,648 p=172961 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:22:51,294 p=172961 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:22:51,303 p=172961 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:22:52,178 p=172961 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:22:52,223 p=172961 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:22:52,223 p=172961 u=student n=ansible | ansible1                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:22:52,223 p=172961 u=student n=ansible | ansible2                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:22:52,223 p=172961 u=student n=ansible | ubuntu                     : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:43:14,201 p=173451 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:43:14,212 p=173451 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:43:17,635 p=173451 u=student n=ansible | fatal: [ansible2]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:43:17,710 p=173451 u=student n=ansible | fatal: [ansible1]: FAILED! => {"msg": "Incorrect sudo password"}
+2026-11-16 03:43:17,712 p=173451 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:43:17,712 p=173451 u=student n=ansible | ansible1                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:43:17,712 p=173451 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:43:20,690 p=173496 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:43:20,701 p=173496 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:43:22,372 p=173496 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:43:22,576 p=173496 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:43:22,613 p=173496 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:43:24,479 p=173496 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:43:24,655 p=173496 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:43:24,662 p=173496 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:43:25,798 p=173496 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:43:25,860 p=173496 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:43:25,867 p=173496 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:43:27,270 p=173496 u=student n=ansible | ok: [ansible2]
+2026-11-16 03:43:27,307 p=173496 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:43:27,352 p=173496 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:43:27,356 p=173496 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:43:29,131 p=173496 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:43:29,172 p=173496 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:43:30,419 p=173496 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:43:30,428 p=173496 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:43:31,129 p=173496 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:43:31,138 p=173496 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:43:32,128 p=173496 u=student n=ansible | ok: [ubuntu]
+2026-11-16 03:43:32,189 p=173496 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:43:32,189 p=173496 u=student n=ansible | ansible1                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:43:32,190 p=173496 u=student n=ansible | ansible2                   : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:43:32,190 p=173496 u=student n=ansible | ubuntu                     : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:43:39,612 p=173648 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:43:41,236 p=173661 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:43:41,237 p=173661 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:43:41,238 p=173661 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:43:41,777 p=173664 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
+2026-11-16 03:43:41,820 p=173642 u=student n=ansiblelint | Listing 1 violation(s) that are fatal
+2026-11-16 03:43:55,729 p=173692 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:43:57,419 p=173705 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:43:57,420 p=173705 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:43:57,421 p=173705 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:43:57,942 p=173708 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
+2026-11-16 03:47:05,442 p=173784 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:47:05,453 p=173784 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:47:15,511 p=173784 u=student n=ansible | fatal: [ansible2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host ansible2 port 22: Connection timed out", "unreachable": true}
+2026-11-16 03:47:29,725 p=173784 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:47:29,746 p=173784 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:47:31,484 p=173784 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:47:31,492 p=173784 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:47:32,548 p=173784 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:47:32,555 p=173784 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:47:33,900 p=173784 u=student n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after[0m
+[0;32m[0m[0;36m@@ -1,4 +1,4 @@[0m
+[0;36m[0m {
+[0;31m-    "owner": 1000,[0m
+[0;31m[0m[0;32m+    "owner": 48,[0m
+[0;32m[0m     "path": "/var/www/html/index.html"
+ }
+
+
+2026-11-16 03:47:33,901 p=173784 u=student n=ansible | changed: [ansible1]
+2026-11-16 03:47:33,924 p=173784 u=student n=ansible | RUNNING HANDLER [Restart Web Server] **********************************************************************************************
+2026-11-16 03:47:34,730 p=173784 u=student n=ansible | changed: [ansible1]
+2026-11-16 03:47:34,746 p=173784 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:47:34,760 p=173784 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:47:47,292 p=173784 u=student n=ansible | fatal: [ubuntu]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2026-11-16 03:47:47,293 p=173784 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:47:47,293 p=173784 u=student n=ansible | ansible1                   : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:47:47,293 p=173784 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:47:47,293 p=173784 u=student n=ansible | ubuntu                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:48:13,182 p=173891 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:48:13,199 p=173891 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:48:16,347 p=173891 u=student n=ansible | fatal: [ansible2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host ansible2 port 22: No route to host", "unreachable": true}
+2026-11-16 03:48:33,362 p=173891 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:48:33,399 p=173891 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:48:35,100 p=173891 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:48:35,108 p=173891 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:48:36,277 p=173891 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:48:36,284 p=173891 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:48:37,723 p=173891 u=student n=ansible | [0;31m--- before[0m
+[0;31m[0m[0;32m+++ after[0m
+[0;32m[0m[0;36m@@ -1,4 +1,4 @@[0m
+[0;36m[0m {
+[0;31m-    "owner": 1000,[0m
+[0;31m[0m[0;32m+    "owner": 48,[0m
+[0;32m[0m     "path": "/var/www/html/index.html"
+ }
+
+
+2026-11-16 03:48:37,724 p=173891 u=student n=ansible | changed: [ansible1]
+2026-11-16 03:48:37,750 p=173891 u=student n=ansible | RUNNING HANDLER [Restart Web Server] **********************************************************************************************
+2026-11-16 03:48:38,548 p=173891 u=student n=ansible | changed: [ansible1]
+2026-11-16 03:48:38,564 p=173891 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:48:38,576 p=173891 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:48:50,828 p=173891 u=student n=ansible | fatal: [ubuntu]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2026-11-16 03:48:50,829 p=173891 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:48:50,829 p=173891 u=student n=ansible | ansible1                   : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:48:50,829 p=173891 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:48:50,830 p=173891 u=student n=ansible | ubuntu                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:49:21,658 p=173996 u=student n=ansible | PLAY [Play 1 - Rocky Hosts] *******************************************************************************************************
+2026-11-16 03:49:21,670 p=173996 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:49:24,826 p=173996 u=student n=ansible | fatal: [ansible2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host ansible2 port 22: No route to host", "unreachable": true}
+2026-11-16 03:49:41,923 p=173996 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:49:41,943 p=173996 u=student n=ansible | TASK [Install Web Server] *********************************************************************************************************
+2026-11-16 03:49:43,763 p=173996 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:49:43,771 p=173996 u=student n=ansible | TASK [Start and Enable Web Server] ************************************************************************************************
+2026-11-16 03:49:44,932 p=173996 u=student n=ansible | ok: [ansible1]
+2026-11-16 03:49:44,941 p=173996 u=student n=ansible | TASK [Move index.j2 to Remote Server] *********************************************************************************************
+2026-11-16 03:49:46,433 p=173996 u=student n=ansible | changed: [ansible1]
+2026-11-16 03:49:46,450 p=173996 u=student n=ansible | RUNNING HANDLER [Restart Web Server] **********************************************************************************************
+2026-11-16 03:50:25,357 p=173996 u=student n=ansible | changed: [ansible1]
+2026-11-16 03:50:25,373 p=173996 u=student n=ansible | PLAY [Play 2 - ubuntu Hosts] ******************************************************************************************************
+2026-11-16 03:50:25,378 p=173996 u=student n=ansible | TASK [Gathering Facts] ************************************************************************************************************
+2026-11-16 03:50:37,944 p=173996 u=student n=ansible | fatal: [ubuntu]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2026-11-16 03:50:37,945 p=173996 u=student n=ansible | PLAY RECAP ************************************************************************************************************************
+2026-11-16 03:50:37,945 p=173996 u=student n=ansible | ansible1                   : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:50:37,945 p=173996 u=student n=ansible | ansible2                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:50:37,945 p=173996 u=student n=ansible | ubuntu                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-11-16 03:51:32,445 p=174132 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:51:34,107 p=174147 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:51:34,108 p=174147 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:51:34,108 p=174147 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:51:34,665 p=174150 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
+2026-11-16 03:51:40,230 p=174163 u=student n=ansible | ERROR! - None of the provided paths were usable. Please specify a valid path with --collections-path
+2026-11-16 03:51:41,898 p=174176 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: rocky_hosts
+
+2026-11-16 03:51:41,899 p=174176 u=student n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntu_hosts
+
+2026-11-16 03:51:41,900 p=174176 u=student n=ansible | playbook: site.yaml
+2026-11-16 03:51:42,499 p=174179 u=student n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO"
+}
