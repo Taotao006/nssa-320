@@ -51,8 +51,4 @@
     - name: Restart Web Server
       ansible.builtin.service:
         name: "{{ service_name }}"
-<<<<<<< HEAD
         state: restarted
-=======
-        state: restarted
->>>>>>> 0748359 (done)
